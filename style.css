@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #22252d;
+}
+
+.app {
+    display: grid;
+    place-items: center;
+    height: 100dvh;
+}
+
+.display {
+    display: flex;
+    align-items: end;
+    height: 100%;
+}
+
+input {
+    width: 100%;
+    padding: 20px;
+    font-size: 40px;
+    text-align: right;
+    background-color: #22252d;
+    color: #fff;
+    overflow-x: scroll;
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 8px;
+    border-radius: 21px 21px 0px 0px;
+    height: 100%;
+    width: 100%;
+    background-color: #2a2d37;
+}
+
+.keypad button {
+    padding: 20px;
+    margin: 5px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    background-color: #282b33;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 1px solid #38393d;
+    box-shadow: 5px 5px 10px #1e2028;
+    transition: all 0.3s ease; 
+}
+
+.keypad button:hover, .keypad button:active {
+    box-shadow: 2px 2px 5px #1e2028;
+}
+
+#clear {
+    grid-column: span 3;
+}
+
+@media screen and (min-width: 520px) {
+
+    body {
+        display: flex;
+        justify-content: center;
+    }
+
+    .keypad {
+        background-color: transparent;
+    }
+
+    .keypad button:hover {
+        background-color: #38393d;
+    }
+    
+}
